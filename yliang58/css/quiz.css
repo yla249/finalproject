@@ -1,0 +1,51 @@
+@import url("/students/yliang58/css/finalprojectstyle.css");
+
+section{
+    position:absolute;
+    top:150px;
+    margin:0px 200px;
+	}
+
+ 
+
+form {
+        /*background-color: #3B5998;*/
+}
+textarea {
+    margin:0px 10px;
+}
+radio {
+    float:left;
+}
+label {
+    margin:0px 10px;
+}
+
+label[for=name],label[for=id]{
+    font-size:1.2em;
+    padding:20px;
+   
+}
+
+input[type=Submit]{
+    border-radius: 50px 50px;
+    margin-top:25px;    
+    font-size:1.2em;
+    border:2px;
+    border-style:solid;
+    border-color:#293E6A ;
+    background-color:#77ba9b;
+    color: #000000;
+    padding:5px 10px ;
+}
+
+input[type=Submit]:hover{
+
+    background-color:#293E6A ;
+    color: #77ba9b;
+}
+
+input[type=radio]{
+    float:left;
+    margin:0px 15px;
+}

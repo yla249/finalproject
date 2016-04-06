@@ -1,0 +1,52 @@
+@import url("/students/yliang58/css/normalize.css");
+@import url("/students/yliang58/css/finalprojectstyle.css");
+
+body {
+    background-color:#000;
+    color:white;
+}
+
+h2{
+    position:absolute;
+    background-color:transparent;
+    top:200px;
+    left:1000px;
+    color:#00a2fa;
+    font-size:2em;
+}
+p {
+    color:#00a2fa;
+    left:300px;
+   
+}
+img{
+	border:solid 1px #555;
+	border-left:dashed 1px #777;
+	border-right:dashed 1px #777;
+}
+.error_message{
+	background-image:url("/students/yliang58/images/error.jpg");
+     height:1104px;
+    padding-top:1px;
+	
+}
+.error_message span{
+	font-size:2em;
+	font-weight:bold;
+	position:relative;
+	top:150px;
+	left:58px;
+}
+.error_message p{
+	font-size:1.2em;
+	position:relative;
+	top:170px;
+	text-align:center;
+}
+#header_links,header {
+     
+     text-shadow: 9px 9px 30px rgba(255, 0, 0, 1);
+    -ms-transform: rotate(30deg) translateY(250px) translateX(350px); /* IE 9 */
+    -webkit-transform: rotate(30deg) translateY(250px) translateX(350px); /* Chrome, Safari, Opera */
+    transform: rotate(30deg) translateY(250px) translateX(350px);
+}

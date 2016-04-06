@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<!--
+Name:	Sam
+Date:	03/04/2016
+Notes:	This is the quizz page for Final Project
+-->
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="/students/yliang58/css/quiz.css" type="text/css" media="screen" />
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if IE 6]>
+    <style>
+    body {behavior: url("csshover3.htc");}
+    #menu li .drop {background:url("img/drop.gif") no-repeat right 8px;
+    </style>
+    <![endif]-->
+
+   
+    <title>COMP 1950 :: Quiz 1</title>
+
+  
+<!--jQuery Library -->  
+<script type="text/javascript" 
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"> 
+</script>
+
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"> </script>
+<script type="text/javascript" src="/students/yliang58/js/external_javascript.js"></script>
+
+
+<!--jQuery Plug-in for this page -->
+
+</head>
+
+<body>
+
+
+    <header><h1>BCIT - COMP1950 Intermediate Web Design and Development</h1></header>
+    <!--#include virtual="/students/yliang58/inc/navigation.inc" --> 
+    <!--#include virtual="/students/yliang58/inc/responsive_nav.inc" --> 
+   
+    <section>
+        <h2>Quiz 1</h2>
+        <p>Please put your name and student ID. You have 15 minutes to answer the questions. Press "Submit" once yor are done .</p>
+        <form action="../php/formmail.php" method="post">
+
+            <label for="name"> Name: <span class="form-required">*</span></label>
+            <input required
+                   type="text"
+                   id="name"
+                   name="name" />
+
+        
+
+            <label for="id"> Student ID: <span class="form-required">*</span></label>
+            <input required
+                   type="text"
+                   id="id"
+                   name="id" />
+
+            <br />
+            <br />
+
+
+            <hr />
+
+
+            <h3><label for="q1">1. What does the acronym XHTML stand for? (1 mark)</label></h3>
+            <textarea cols="100"
+                      rows="10"
+                      name="q1"
+                      id="q1"></textarea>
+            <br />
+
+            <h3><label for="q2">2. XHTML is meant to be “well formed”, which carries a series of strict rules for how to write code. Briefly state three of these rules: (3 marks)</label></h3>
+            <textarea cols="100"
+                      rows="10"
+                      name="q2"
+                      id="q2"></textarea>
+            <br />
+
+            <h3><label for="q3">3. XHTML 1.0 has three approved DOCTYPEs. One is called Frameset. Name one of the other two. (1 mark)</label></h3>
+            <textarea cols="100"
+                      rows="10"
+                      name="q3"
+                      id="q3"></textarea>
+            <br />
+
+            <h3><label for="q4">4. Choose the media query breakpoint that will match when the browser viewport is thinnest (1 mark)</label></h3>
+            <label for="a">a. @media only screen and (min-width:1024px)</label>
+            <input type="radio"
+                   name="q4"
+                   id="a"
+                   value="a" />
+            <br />
+            <label for="b">b. @media only screen and (min-width:300px) and (max-width: 800px)</label>
+            <input type="radio"
+                   name="q4"
+                   id="b"
+                   value="b" />
+            <br />
+            <label for="c">c. @media only screen and (min-width:800px) and (max-width: 1024px)</label>
+            <input type="radio"
+                   name="q4"
+                   id="c"
+                   value="c" />
+            <br />
+
+            <h3><label for="q5">5. HTML5 introduces a series of new semantic tags like &ltheader> and &ltfooter>. Name two other new semantic tags in HTML5. (2 marks)</label></h3>
+            <textarea cols="100"
+                      rows="10"
+                      name="q5"
+                      id="q5"></textarea>
+            <br />
+
+            <h3><label for="q6">6. Which of the various Markup Languages is the current W3C recommendation? (1 mark)</label></h3>
+            <textarea cols="100"
+                      rows="10"
+                      name="q6"
+                      id="q6"></textarea>
+            <br />
+
+            <h3><label for="q7">7. HTML5 will include rules for how browsers handle errors in the code. (1 mark)</label></h3>
+            <label for="true">True</label>
+            <input type="radio"
+                   name="q7"
+                   id="true"
+                   value="true" />
+            <br />
+            <label for="false">False</label>
+            <input type="radio"
+                   name="q7"
+                   id="false"
+                   value="false" />
+            <br />
+            <hr />
+
+            <input type="Submit"
+                   value="Submit"
+                   class="submit_button" />
+
+            <input type="hidden" name="recipient" value="jeffrey_parker@bcit.ca" />
+        </form>
+    </section>
+    
+ 
+</body>
+
+</html>

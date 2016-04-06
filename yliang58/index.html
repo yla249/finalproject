@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html>
+<html>
+
+<!--
+Author:Didi Liang
+Date:4/2/2016
+Notes:This is the intro page for COMP1950 Group Project
+ -->
+
+<head>
+    <meta charset="utf-8">
+    <title>Intro_COMP1950 Group Project</title>
+    <meta name="description" content="This is the intro page
+ 	 for COMP1950 Group Project, created by Annie, Didi, Sam and Selene.">
+
+    <link rel="stylesheet" href="/students/yliang58/css/stylesheet.css">
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+
+    <!-- JQuery Plugins-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('a.login-window').click(function () {
+
+                // Getting the variable's value from a link
+                var loginBox = $(this).attr('href');
+
+                //Fade in the Popup and add close button
+                $(loginBox).fadeIn(300);
+
+                //Set the center alignment padding + border
+                var popMargTop = ($(loginBox).height() + 24) / 2;
+                var popMargLeft = ($(loginBox).width() + 24) / 2;
+
+                $(loginBox).css({
+                    'margin-top': -popMargTop,
+                    'margin-left': -popMargLeft
+                });
+
+                // Add the mask to body
+                $('body').append('<div id="mask"></div>');
+                $('#mask').fadeIn(300);
+
+                return false;
+            });
+
+            // When clicking on the button close or the mask layer the popup closed
+            $('a.close, #mask').live('click', function () {
+                $('#mask , .login-popup').fadeOut(300, function () {
+                    $('#mask').remove();
+                });
+                return false;
+            });
+
+
+        });
+
+
+    </script>
+    <!-- Jquery plugin ends from here-->
+</head>
+
+
+
+
+<body>
+    <div id="container">
+        <!--all content starts from here -->
+        <nav>
+            <!--nav starts from here -->
+            <ul>
+                <li><a href="#">Intro</a></li>
+                <li><a href="/students/yliang58/home.html">Proto-site</a> </li>
+                <li><a href="/students/yliang58/sitemap.html">Sitemap</a></li>
+                <li><a href="/students/yliang58/rationale.html">Rationale</a></li>
+            </ul>
+
+            <!--nav ends from here -->
+        </nav>
+        <section>
+            <!--text starts from here -->
+            <h1>Welcome to COMP1950</h1>
+            <div id="prompt">
+                <p>Click on "Login",then choose
+    	 "Continue as a guest" to enter our Proto-site</p>
+            </div>
+
+            <div class="btn-sign">
+                <a href="#login-box" class="login-window">Login</a>
+            </div>
+
+
+            <div id="login-box" class="login-popup">
+                <a href="#" class="close"><img src="close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>
+                <form method="post" class="signin" action="#">
+                    <fieldset class="textbox">
+                        <label class="username">
+                            <span>BCIT ID</span>
+                            <input id="username" name="username" value="" type="text" autocomplete="on" placeholder="Student Number">
+                        </label>
+
+                        <label class="password">
+                            <span>Password</span>
+                            <input id="password" name="password" value="" type="password" placeholder="Password">
+                        </label>
+
+                        <!--need to be fixed!! -->
+                        <button class="submit button" type="button">Log in</button>
+                        <!--need to be fixed!! -->
+
+
+                    <div id="guest"><p><a class="window_text" href="/students/yliang58/home.html">Continue as a Guest</a>
+                    </p></div>
+
+                    </fieldset>
+                </form>
+            </div>
+
+
+            <div class="box">
+                <!-- a textbox starts from here: about what we do as a group -->
+                <h3>The Group Project:Redesign the COMP1950 Webpage</h3>
+                <P>We all worked together to accomplish the following:</P>
+                <ul>
+                    <li>Assessed project questionnaire </li>
+                    <li>Designed the new layout of the website</li>
+                    <li>Chose colours for the new site redesign</li>
+                    <li>Defining paths from root directory</li>
+                    <li>Discussed reasons for changes as defined on the rationale page</li>
+                    <li>Organized files </li>
+                    <li>Explored GitHub</li>
+                    <li>Decided who was going to do what</li>
+                    <li>Decided which pages would be included in the Proto-site</li>
+                </ul>
+
+                <!-- a textbox ends from here: about what we do as a group -->
+            </div>
+            <div class="box">
+                <h4>Selene Dublanko</h4>
+                <img src="/students/yliang58/images/selene.jpg" alt="Selene's profile pic">
+                <ul>
+                    <li>Wrote the html for the Exercises 8 page</li>
+                    <li>Wrote the html for the Lecture 3 page</li>
+                    <li>Provided the css styling for print media (made print.css)</li>
+                    <li>Took notes during our first group meeting of what everyone was going to do</li>
+                    <li>Wrote the html for the Rationale page</li>
+                </ul>
+
+
+                <h4>Didi Liang </h4>
+                <img src="/students/yliang58/images/didi.jpg" alt="Didi's profile pic">
+                <ul>
+                    <li>
+                        Main liason communicator. Was responsible to update Github and uploaded
+                        final project to her webspace
+                    </li>
+                    <li>Wrote the html for Intro page</li>
+                    <li>Wrote the html for Resources page</li>
+                    <li>Wrote the style and navigation for Intro,Rationale and Sitemap page</li>
+                    <li>Create responsive design and a JQuery menu</li>
+                </ul>
+                <h4>Hessam Ganjian</h4>
+                <img src="/students/yliang58/images/sam.jpg" alt="Sam's profile pic">
+                <ul>
+                    <li>Made the quiz page</li>
+                    <li>Added php to be able to submit the quizzes</li>
+                    <li>Managed the links in the .inc files</li>
+                    <li>Debugged the whole project and checked for errors</li>
+                    <li>Managed the server with .htaccess</li>
+</ul>
+
+                <h4>Annie Wu</h4>
+                <img src="/students/yliang58/images/annie.jpg" alt="Annie's profile pic">
+                <ul>
+                    <li>Wrote html for protosite homepage.</li>              
+                    <li>Designed the Navigation.</li>             
+                    <li>Wrote finalprojectstyle.css</li>
+                    <li>Wrote sitemap.html</li>
+
+                </ul>
+            </div>
+            <!--text ends from here -->
+            <br>
+            <br>
+
+        </section>
+        <!--Container:all contents ends from here -->
+    </div>
+</body>
+
+</html>

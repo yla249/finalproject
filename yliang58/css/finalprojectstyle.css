@@ -1,0 +1,158 @@
+@import url("/students/yliang58/css/normalize.css");
+@import url("/students/yliang58/css/menu.css");
+@import url("/students/yliang58/css/print.css") print;
+
+header{
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	background-color:#293E6A;
+	color:#FFFFFF;
+	padding:10px;
+	z-index:9998;}
+
+main{
+	margin-top:130px;
+	margin-left:50px;
+	}
+	
+section{
+	width:800px;
+	border: 3px solid #77BA9B;
+	border-top: 0px solid #77BA9B;
+	padding:0px;
+	margin-bottom:20px;
+	}
+	
+aside{
+	border:3px solid #3B5998;
+	background-color:#BDD5FC;
+	width:250px;
+	padding:10px;
+	position:absolute;
+	right:10px;
+	top:140px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	}
+
+.content{
+	margin: 10px;
+	}
+
+.info{
+	background-color:#B6A754;
+	color:#000000;
+	padding-left:20px;
+	border: 1px solid #000000;
+	width:784px}
+	
+	
+	
+h1{width:100%;}	
+h2{
+	font-family: verdana;
+	background-color:#77BA9B;
+	padding:5px 0px 5px 0px;
+	width:100%;
+	margin:0px;
+
+	}
+	
+body, ul, li {
+	font-size:14px; 
+	font-family:Arial, Helvetica, sans-serif;
+	line-height:21px;
+	text-align:left;
+	}
+
+a{
+	color:#3B5998;
+	font-weight:bold;
+	}
+
+a:visited{
+	color: #293E6A;
+	}
+
+a:hover{
+	color:#639BF1;
+	}
+
+a:active{
+	color:#77BA9B;
+	}	
+	
+/*---------------------------------------------------------
+media query rules 
+
+---------------------------------------------*/
+
+
+/*for widescreen device */
+
+
+
+@media only screen and (min-width:751px){
+
+h1{font-size:1.8em;}
+
+
+header{width:100%;}
+
+main{font-size:1.1em;}
+
+#nav, #navlist{display:none;}
+#menu{display:block;}	
+
+
+section ul li{
+		width:auto;
+		font-size:1em;}
+		
+}
+	
+
+/*for thinscreen device */
+
+
+
+
+
+@media only screen and (min-width:100px) and (max-width:1165px){
+#container, #content, nav ul,section, aside, footer, .info{
+		width:auto;
+		font-size:1em;
+	   }	
+
+section{margin-bottom:0px;}
+	
+section ul li{
+		width:auto;
+		font-size:1em;
+	}	
+	
+h1{font-size:1.7em;
+
+}
+h2{font-size:1.3em;
+}
+h3{font-size:1.1em;}
+
+header{position:relative;
+    width:100%;}
+
+
+
+main{margin:20px 20px 0px 20px;}
+
+
+
+aside{position:relative;top:20px;left:0px;}
+
+#nav, #navlist{display:block;}
+#menu{display:none;}
+
+}

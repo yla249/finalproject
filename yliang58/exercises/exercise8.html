@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+
+<!--This html page was created by Selene Dublanko as a part of the final group project for COMP1950-->
+
+<!--So this is just the html for the exercises page-->
+
+<html>
+	<head>
+		<title>Exercises</title>
+		<meta charset="utf-8" />
+    	<link rel="stylesheet" href="/students/yliang58/css/finalprojectstyle.css" type="text/css" media="screen" />
+
+<!--jQuery Library -->  
+<script type="text/javascript" 
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"> 
+</script>
+
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"> </script>
+<script type="text/javascript" src="/students/yliang58/js/external_javascript.js"></script>
+
+
+<!--jQuery Plug-in for this page -->
+
+	</head>
+	<body>
+	 <header><h1>BCIT - COMP1950 Intermediate Web Design and Development</h1></header>
+    <!--#include virtual="/students/yliang58/inc/navigation.inc" --> 
+		    <!--#include virtual="/students/yliang58/inc/responsive_nav.inc" --> 
+
+		<main>
+			<h1>Lecture 8: Dynamic Content</h1>
+			<section>
+			<h2>Exercise 1: Install and run an HTTP server</h2>
+			 <div class="content">
+				<p>Install a web server environment on your client machine.</p>
+				<ol>
+					<li>download an open source server package for your operating system:
+						<ul>
+							<li><a href="http://www.wampserver.com/en/">WAMP</a> - 			windows</li>
+							<li><a href="http://www.mamp.info/en/">MAMP</a> - macintosh</li>
+						</ul>
+					</li>	
+					<li><strong>important:</strong> if using BCIT lab computers, install the server to the C: drive, NOT your personal drive on H:.</li>
+					<li>install the downloaded package with default settings</li>
+					<li>start the http server</li>
+					<li>visit <code>http://localhost</code> in your web browser</li>
+				</ol>
+				</div>
+			</section>
+			<section>
+			<h2>Exercise 2: HTTP Server Configuration</h2>
+				 <div class="content">
+			
+				<p>Complete both challenges in this exercise. Ask your instructor if you have questions.</p>
+				<p><a href="/_shared_resources_1950/downloads/apache_server_exercise.zip">Download the exercise starting files</a></p>
+
+				<ol>
+					<li>Uncompress the contents of the exercise download</li>
+					<li>Place all files and folders in your server root (<code>css</code>, <code>images</code> and <code>errors</code> folders)</li>
+					<li>Update the HTML file <code>sample_file.html</code> wherever it references images or css files: Currently relative paths are used. Change these to server-based relative paths</li>
+					<li>Request this page on localhost to confirm the stylesheet and images are loading</li>
+					<li>Make a copy of the HTML page and place it in a subfoldefr created by you. Test this page via localhost to demonstrate the increased portability of your HTML code</li>
+					<li>Use <code>.htaccess</code> to assign default error message pages. Open the included <code>.htaccess</code> file, and add the following directives:
+					<li><code>ErrorDocument 404 /errors/file_not_found.html</code></li>
+					<li>Trigger an error by requesting over <code>localhost</code> a page that doesn't exist. Does <code>file_not_found.html</code> display and use the warning image? If not, examine <code>file_not_found.html</code>s paths, and ensure they match the file loactions on you server</li>
+				</ol>	
+				</div>
+			</section>
+			<section>
+			<h2>Exercise 3: Run An Example SSI</h2>
+			 <div class="content">
+				<ul>
+					<li>Download a <a href="/_shared_resources_1950/downloads/htaccess.zip">.zip file containing an .htaccess</a> and, after uncompressing it, place the <code>.htaccess</code> file in your server root.</li>
+					<li>Create an HTML page using the extension <code>.shtml</code></li>
+					<li>Add the following lines in the body of the page:<br /><code>&lt;!--#echo var="DOCUMENT_NAME"--></code> </li>
+					<li>Place your <code>.shtml</code> file in your server root and test it using localhost. The page should display it's file name. If not, see your instructor. If so, proceed to the next step...</li>
+					<li>Make a copy of your <code>.shtml</code> page, but this time change the extension to the more standard <code>.html</code> or <code>.htm</code>. Test this new page via localhost. The SSI will not run, since the server only parses file extensions defined by the developer.</li>
+					<li>Update the <code>.htaccess</code> file by adding more extensions to it's SSI parsing. For example: 
+					<h4>Before</h4><pre><code>AddType text/html .shtml 
+				AddHandler server-parsed .shtml 
+				Options Indexes FollowSymLinks Includes</code></pre><h4>After</h4><pre><code>#note the space delimited list of file extensions added...
+				AddType text/html .shtml .html .htm
+				AddHandler server-parsed .shtml .html .htm 
+				Options Indexes FollowSymLinks Includes 
+					</code></pre>
+					</li>
+					<li>Retest the page. SSIs should now work on pages that end with <code>.html</code> and <code>.htm</code></li>
+				</ul>
+				</div>
+			</section>
+			<section>
+			<h2>Exercise 4: Formatting</h2>
+			 <div class="content">
+				<p>Use SSI to add a formatted date to an HTML page matching this pattern: <code><!--#config timefmt="%A, %B %e" --><!--#echo var="DATE_LOCAL" --></code></p>
+				<h2>Formatting</h2>
+				<ul>
+					<li>Showing the raw date isn't always the attractive option</li>
+					<li>Formatting the date to show in a configurable manner is required</li>
+					<li>This is done through the <code>config timefmt</code> command</li>
+				</ul>
+				<p>For a hint, check this page:<br />
+				<a href="http://www.htmlite.com/SSI005.shtml">http://www.htmlite.com/SSI005.shtml</a>
+				<br />
+					Lots of examples on how to <a href="http://www.zytrax.com/tech/web/ssi.htm#time">configure time and date with SSIs</a></p>
+				</div>
+			</section>
+			
+			
+			<section>
+			<h2>Exercise 5a: Dynamic Navigation</h2>
+				 <div class="content">
+				<p>Deploy a navigation using SSI. </p>
+				<ul>
+				<li><a href="/_shared_resources_1950/downloads/server_side_includes.zip">Download the exercise source files</a>.</li>
+				<li>Extract the navigation related code from each html file</li>
+				<li>Place the navigation code in one external file</li>
+				<li>Use the server side includes 'include' token to load the navigation on each page. EG:<br /><code>&lt;!--#include file="inc/nav.inc" --&gt;</code></li>
+				<li><a href="/_shared_resources_1950/downloads/server_side_includes_solution_a.zip">Download a sample solution</a></li>
+				</ul>
+			</div>	
+			</section>
+			
+			
+			<section>
+			<h2>Exercise 5b: Dynamic Navigation</h2>
+			 <div class="content">
+				<p>Update your code from the previous SSI Navigation exercise.</p>
+				<p>Use the if control structure to enhance your SSI navigation code. Create a unique styled version of the nav option for the page the user is currently viewing.</p>
+				<p><a href="/_shared_resources_1950/downloads/server_side_includes_solution_b.zip">Download a sample solution</a></p>
+			</div>
+			</section>
+		</main>
+		
+	</body>
+</html>

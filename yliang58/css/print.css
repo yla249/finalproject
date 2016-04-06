@@ -1,0 +1,26 @@
+/* This is an alternate stylesheet for "print" for the final project for the class COMP1950
+created by: Selene Dublanko*/
+
+header, nav, aside, footer{
+		display:none;
+}
+body, main{
+	   float: none;
+	   width: auto;
+	   margin: 0;
+	   padding: 0;
+	   background: none;
+	   font-family: times new roman;
+	   font-size: 12pt;
+	}
+h1, h2, h3{ 
+		page-break-after: avoid; 
+}
+
+a:link:after, a:visited:after{
+		content: " (URL: " attr(href) ") ";	
+		font-size: 90%;
+		text-decoration: underline;
+		font-weight:bold;
+}
+	
